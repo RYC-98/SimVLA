@@ -1,4 +1,6 @@
-# Environment Setup
+# On Success and Simplicity: A Second Look at Transferable Vision-Language Attack Pipeline (Under Review)
+
+## Environment Setup
 
 Install the dependencies according to the evaluation task you want to run.
 
@@ -14,7 +16,7 @@ For example, to configure the environment for image–text retrieval:
 pip install -r requirements_re.txt
 ```
 
-# Run Attack and Evaluation
+## Run Attack and Evaluation
 
 Run the corresponding script according to the source and target models.
 
@@ -24,7 +26,7 @@ For example, to transfer adversarial examples from **ALBEF** to **CLIP-CNN**:
 python t_main_a2cc.py
 ```
 
-# Bug Fix
+## Bug Fix
 
 In the main implementations of **SGA**, **DRA**, and **SA-AET**, the initial value of `index` in the `_tokenize()` function should be changed from `0` to `1`:
 
@@ -47,7 +49,7 @@ def _tokenize(self, text):
     return words, sub_words, keys
 ```
 
-## Why Should `index` Start from 1?
+### Why Should `index` Start from 1?
 
 The BERT tokenizer adds special tokens to the input sequence by default. For a single input sentence, the tokenized sequence has the following structure:
 
@@ -63,7 +65,7 @@ Consequently, an offset of `1` is required to align each word and its WordPiece 
 
 If `index` starts from `0`, all word positions are shifted one position to the left. For example, the first word may incorrectly include the prediction at the `[CLS]` position while omitting its last WordPiece token. This positional misalignment causes incorrect substitute-token extraction and degrades the quality of the generated adversarial text.
 
-## Results After the Fix
+### Results After the Fix
 
 After correcting the token-position offset, SGA, DRA, and SA-AET achieve improvements on both text retrieval and image retrieval tasks.
 
