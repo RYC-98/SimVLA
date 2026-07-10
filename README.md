@@ -1,4 +1,4 @@
-# On Success and Simplicity: A Second Look at Transferable Vision-Language Attack Pipeline (Under Review)
+# On Success and Simplicity: A Second Look at Transferable Vision-Language Attack Pipeline
 
 ## Environment Setup
 
