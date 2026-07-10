@@ -72,6 +72,7 @@ After correcting the token-position offset, SGA, DRA, and SA-AET achieve improve
 <table>
   <thead>
     <tr>
+      <th rowspan="3">Model</th>
       <th rowspan="3">Attack</th>
       <th colspan="4">CLIP<sub>ViT</sub></th>
     </tr>
@@ -88,6 +89,7 @@ After correcting the token-position offset, SGA, DRA, and SA-AET achieve improve
   </thead>
   <tbody>
     <tr>
+      <td rowspan="7">ALBEF</td>
       <td>SGA</td>
       <td>32.39</td>
       <td>8.64</td>
