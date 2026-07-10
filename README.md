@@ -14,6 +14,16 @@ For example, to configure the environment for image–text retrieval:
 pip install -r requirements_re.txt
 ```
 
+# Run Attack and Evaluation
+
+Run the corresponding script according to the source and target models.
+
+For example, to transfer adversarial examples from **ALBEF** to **CLIP-CNN**:
+
+```bash
+python t_main_a2cc.py
+```
+
 # Bug Fix
 
 In the main implementations of **SGA**, **DRA**, and **SA-AET**, the initial value of `index` in the `_tokenize()` function should be changed from `0` to `1`:
