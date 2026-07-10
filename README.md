@@ -67,7 +67,9 @@ If `index` starts from `0`, all word positions are shifted one position to the l
 
 ### Results After the Fix
 
-After correcting the token-position offset, SGA, DRA, and SA-AET achieve improvements on both text retrieval and image retrieval tasks. For example, we use ALBEF as the surrogate model and CLIP<sub>ViT</sub></th> as the target model to demenstrate the improvement.
+After correcting the token-position offset, SGA, DRA, and SA-AET achieve improvement on both text retrieval and image retrieval tasks. 
+
+For example, we use ALBEF as the surrogate model and CLIP<sub>ViT</sub></th> as the target model to demenstrate the improvement.
 
 <table>
   <thead>
